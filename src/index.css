@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Schibsted Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --color-ink: #14241c;
+  --color-ink-soft: #5c675f;
+  --color-paper: #f3efe6;
+  --color-paper-2: #e8e2d6;
+  --color-card: #fffcf7;
+  --color-line: #e0d9cc;
+  --color-copper: #c4622d;
+  --color-copper-deep: #8d3f16;
+  --color-moss: #1c6b45;
+  --color-moss-wash: #e4f2ea;
+  --color-amber: #8a5a12;
+  --color-amber-wash: #f8efd8;
+  --color-stop: #8f2d2d;
+  --color-stop-wash: #f8e6e2;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-variant-numeric: tabular-nums;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+::selection {
+  background: #f0d2c2;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #cfc6b8 transparent;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-copper);
+  outline-offset: 2px;
+}
+
+@keyframes felt-pulse {
+  50% {
+    opacity: 0.45;
+  }
+}
+
+.felt-pulse {
+  animation: felt-pulse 1.1s ease-in-out infinite;
+}
